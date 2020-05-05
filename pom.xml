@@ -145,6 +145,7 @@
                     <version>3.0.0</version>
                 </plugin>
                 <!-- BND Maven Plugin -->
+                <!-- Sling models are binded as we are not using scr plugin here -->
                 <plugin>
                     <groupId>biz.aQute.bnd</groupId>
                     <artifactId>bnd-maven-plugin</artifactId>
