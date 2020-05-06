@@ -37,13 +37,12 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="cyreneshop/renderConditions/renderdescription"
                                 allowedGroup="content-authors"/>
-                        <rtePlugins jcr:primaryType="cq:Widget"
-                                    path="/apps/cyreneshop/components/rte/basic/rtePlugins.infinity.json"
-                                    xtype="cqinclude">
+                        <rtePlugins jcr:primaryType="nt:unstructured"
+                                    sling:resourceSuperType="/apps/cyreneshop/components/rte/basic/standardRte/rtePlugins">
                         </rtePlugins>
-                        <uiSettings jcr:primaryType="cq:Widget"
-                                    path="/apps/cyreneshop/components/rte/basic/uiSettings.infinity.json"
-                                    xtype="cqinclude">
+                        <uiSettings
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceSuperType="/apps/cyreneshop/components/rte/basic/standardRte/uiSettings">
                         </uiSettings>
                     </description>
                 </items>
