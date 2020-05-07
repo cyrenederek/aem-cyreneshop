@@ -1,0 +1,12 @@
+<!--/*Overwrite title component*/-->
+<div class="cmp-title"
+     data-sly-use.title="com.cyreneshop.core.models.ProductTitle"
+     data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     data-sly-test="${properties.productId}">
+    <h1 class="cmp-title__text" data-sly-element="${title.type}">
+    	<a data-sly-unwrap="${!title.linkURL || title.linkDisabled}" class="cmp-title__link" 
+    		href="${title.linkURL}">${title.text}
+        </a>
+    </h1>
+</div>
+<sly data-sly-call="${template.placeholder @ isEmpty=!text, classAppend='cmp-title'}"></sly>
