@@ -1,5 +1,12 @@
 <div data-sly-test="${wcmmode.edit}">PRODUCT TEASER</div>
-<div>${properties.headline}</div>
-<div>${properties.text @ context='html'}</div>
-<div data-sly-resource="${'./image' @ resourceType='cyreneshop/components/image'}"></div>
+<article class="aem-product-teaser">
+    <div class="teaser-container">
+        <h2>${properties.headline}</h2>
+        <p>${properties.text @ context='html'}</p>
+        <footer class="footer-image">
+            <div data-sly-resource="${'./image' @ resourceType='cyreneshop/components/image'}"></div>
+        </footer>
+    </div>
+</article>
+
 

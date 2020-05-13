@@ -38,6 +38,7 @@ public class ProductTitle implements Title {
 
     private ObjectMapper mapper;
     private String text;
+    private String description;
 
     @PostConstruct
     protected void init() {
@@ -53,7 +54,8 @@ public class ProductTitle implements Title {
                 List<ProductData> productList = mapper.readValue(data, listType);
 
                 productList.stream().filter(d -> StringUtils.equalsIgnoreCase(d.getProductId(), productId)).findFirst().ifPresent(t -> {
-                    text = t.getProductName().concat(", ").concat(t.getDescription());
+                    text = t.getProductName();
+                    description = t.getDescription();
                 });
             }
 
@@ -78,4 +80,7 @@ public class ProductTitle implements Title {
         return title.getLinkURL();
     }
 
+    public String getDescription() {
+        return description;
+    }
 }
